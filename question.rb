@@ -6,11 +6,11 @@ class Question
     @num2 = num2
   end
 
-  def question()
+  def question
     "what is #{@num1} + #{@num2}?"
   end
 
-  def answer()
+  def answer
     @num1 + @num2
   end
 end

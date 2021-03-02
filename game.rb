@@ -11,7 +11,7 @@ class Game
   @current_player = p1;
   end
 
-  def new_turn()
+  def new_turn
     puts '---------- New Turn -----------'
   end
 
@@ -20,7 +20,7 @@ class Game
     puts"#{@current_player.name} Wins with a score of #{@current_player.lives}/3"
   end
 
-  def turn () 
+  def turn
     if @current_player == p1
       @current_player = p2
     else 
@@ -28,11 +28,11 @@ class Game
     end
   end
 
-  def score()
+  def score
     puts "#{p1.name}: #{p1.lives}/3 vs #{p2.name}: #{p2.lives}/3"
   end
 
-  def round()
+  def round
     while @p1.lives > 0 && @p2.lives > 0
       question = Question.new(rand(1..20), rand(1..20))
       puts new_turn
